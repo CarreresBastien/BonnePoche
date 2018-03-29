@@ -6,6 +6,11 @@ import unicodedata
 import json
 from elasticsearch import *
 
+import nltk
+nltk.download('punkt')
+
+import textblob as tb
+
 es = Elasticsearch()
 
 # f_out =open("./logstash-6.2.2/input_processed.tsv",'w',encoding = 'utf-8')
