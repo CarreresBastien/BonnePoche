@@ -1,73 +1,77 @@
-
 PUT raiponce
-
 {
-      "settings": {
-    	"analysis": {
-    		"analyzer": {
-    			"lowascii_analyzer": {
-    				"type": "custom",
-    				"tokenizer": "lowercase",
-    				"filter": [
-    					"lowercase",
-    					"asciifolding",
-    					"french_stop"
-    				]
-    			}
-    		}
-    	}
-    },
-    "mappings": {
-  	"_doc": {
-  		"properties": {
-  			"House": {
-  				"type": "text",
-  				"analyzer": "lowascii_analyzer"
-  			},
-  			"Cooking": {
-  				"type": "text",
-  				"analyzer": "lowascii_analyzer"
-  			},
-  			"Music": {
-  				"type": "text",
-  				"analyzer": "lowascii_analyzer"
-  			},
-  			"Game": {
-  				"type": "text",
-  				"analyzer": "lowascii_analyzer"
-  			},
-  			"Sport": {
-  				"type": "text",
-  				"analyzer": "lowascii_analyzer"
-  			},
-  			"Phone": {
-  				"type": "text",
-  				"analyzer": "lowascii_analyzer"
-  			},
-  			"DigitalService": {
-  				"type": "text",
-  				"analyzer": "lowascii_analyzer"
-  			},
-  			"Gender": {
-  				"type": "text",
-  				"analyzer": "lowascii_analyzer"
-  			},
-  			"Age": {
-  				"type": "integer"
-  			},
-  			"City": {
-  				"type": "text",
-  				"analyzer": "lowascii_analyzer"
-  			},
-  			"Date": {
-  				"type": "date",
-  				"format": "yyyy-MM-dd hh:mm:ss"
-  			},
-  			"UserId": {
-  				"type": "text"
-  			}
-  		} 
-  	}
-  }
-  
+	"settings": {
+		"analysis": {
+			"filter": {
+				"custom_french_stop": {
+					"type": "stop",
+					"stopword": "_french_"
+				}
+			},
+			"analyzer": {
+				"lowascii_analyzer": {
+					"type": "custom",
+					"tokenizer": "lowercase",
+					"filter": [
+						"standard",
+						"asciifolding",
+						"lowercase",
+						"custom_french_stop"
+					]
+				}
+			}
+		}
+	},
+	"mappings": {
+		"_doc": {
+			"properties": {
+				"House": {
+					"type": "text",
+					"analyzer": "lowascii_analyzer"
+				},
+				"Cooking": {
+					"type": "text",
+					"analyzer": "lowascii_analyzer"
+				},
+				"Music": {
+					"type": "text",
+					"analyzer": "lowascii_analyzer"
+				},
+				"Game": {
+					"type": "text",
+					"analyzer": "lowascii_analyzer"
+				},
+				"Sport": {
+					"type": "text",
+					"analyzer": "lowascii_analyzer"
+				},
+				"Phone": {
+					"type": "text",
+					"analyzer": "lowascii_analyzer"
+				},
+				"DigitalService": {
+					"type": "text",
+					"analyzer": "lowascii_analyzer"
+				},
+				"Gender": {
+					"type": "text",
+					"analyzer": "lowascii_analyzer"
+				},
+				"Age": {
+					"type": "integer"
+				},
+				"City": {
+					"type": "text",
+					"analyzer": "lowascii_analyzer"
+				},
+				"Date": {
+					"type": "date",
+					"format": "yyyy-MM-dd hh:mm:ss"
+				},
+				"UserId": {
+					"type": "text"
+				}
+			}
+		}
+	}
 }
