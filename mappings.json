@@ -26,39 +26,111 @@ PUT raiponce
 		"_doc": {
 			"properties": {
 				"House": {
-					"type": "text",
-					"analyzer": "lowascii_analyzer"
+					"properties": {
+						"response": {
+							"type": "text",
+							"analyzer": "lowascii_analyzer"		
+						},
+						"polarity": {
+							"type": "double"
+						},
+						"subjectivity": {
+							"type": "double"
+						}
+					}
 				},
 				"Cooking": {
-					"type": "text",
-					"analyzer": "lowascii_analyzer"
+					"properties": {
+						"response": {
+							"type": "text",
+							"analyzer": "lowascii_analyzer"	
+						},
+						"polarity": {
+							"type": "double"
+						},
+						"subjectivity": {
+							"type": "double"
+						}
+						
+					}
 				},
 				"Music": {
-					"type": "text",
-					"analyzer": "lowascii_analyzer"
+					"properties": {
+						"response": {
+							"type": "text",
+							"analyzer": "lowascii_analyzer"	
+						},
+						"polarity": {
+							"type": "double"
+						},
+						"subjectivity": {
+							"type": "double"
+						}
+						
+					}
 				},
 				"Game": {
-					"type": "text",
-					"analyzer": "lowascii_analyzer"
+					"properties": {
+						"response": {
+							"type": "text",
+							"analyzer": "lowascii_analyzer"	
+						},
+						"polarity": {
+							"type": "double"
+						},
+						"subjectivity": {
+							"type": "double"
+						}	
+					}
 				},
 				"Sport": {
-					"type": "text",
-					"analyzer": "lowascii_analyzer"
+					"properties": {
+						"response": {
+							"type": "text",
+							"analyzer": "lowascii_analyzer"	
+						},
+						"polarity": {
+							"type": "double"
+						},
+						"subjectivity": {
+							"type": "double"
+						}
+					}
 				},
 				"Phone": {
-					"type": "text",
-					"analyzer": "lowascii_analyzer"
+					"properties": {
+						"response": {
+							"type": "text",
+							"analyzer": "lowascii_analyzer"	
+						},
+						"polarity": {
+							"type": "double"
+						},
+						"subjectivity": {
+							"type": "double"
+						}
+					}
 				},
 				"DigitalService": {
-					"type": "text",
-					"analyzer": "lowascii_analyzer"
+					"properties": {
+						"response": {
+							"type": "text",
+							"analyzer": "lowascii_analyzer"	
+						},
+						"polarity": {
+							"type": "double"
+						},
+						"subjectivity": {
+							"type": "double"
+						}
+					}
 				},
 				"Gender": {
 					"type": "text",
 					"analyzer": "lowascii_analyzer"
 				},
 				"Age": {
-					"type": "integer"
+					"type": "text"
 				},
 				"City": {
 					"type": "text",
